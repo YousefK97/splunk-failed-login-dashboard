@@ -110,11 +110,25 @@ A scheduled Splunk alert was created to simulate basic SOC detection workflows f
 ## Detection Logic
 The alert identifies repeated failed authentication attempts occuring within a short time window using SPL-based aggregation and threshold analysis.
 
+## Detection Features
+- Threshold-based detection
+- Time-window aggregation
+- Alert suppression (throttling)
+- Triger-based monitoring
+
 ## Alert Features 
 - Scheduled alert execution
 - Threshold-based detection
 - Suppression interval to reduce repetitive alerting
 - Trigger conditions based on failed login frequency
+
+## SPL Detection Logic
+'''spl
+index=main 4625
+| bucket _time span=5m
+| stats count as failed_attempts by _time host
+| where failed_attempts >= 5
+| sort - failed_attempts 
 
 ## screenshots 
 
