@@ -98,3 +98,28 @@ Failed login events were manually generated in a Windows environment by performi
 
 # Author 
 Cybersecurity and SIEM portofolio project created for hands-on Splunk practice and security monitoring experience. 
+
+---
+
+</> Markdown
+
+# Alerting and Detection 
+
+A scheduled Splunk alert was created to simulate basic SOC detection workflows for identifying potential brute-force login activity.
+
+## Detection Logic
+The alert identifies repeated failed authentication attempts occuring within a short time window using SPL-based aggregation and threshold analysis.
+
+## Alert Features 
+- Scheduled alert execution
+- Threshold-based detection
+- Suppression interval to reduce repetitive alerting
+- Trigger conditions based on failed login frequency
+
+## screenshots 
+
+## Brute Force Detection Query 
+![Alert Detection Query](screenshots/alerts/brute_force_detection_query.png)
+
+## Brute Force Alert Configuration 
+![Alert Configuration](screenshots/alerts/brute_force_alert_configuration.png)
