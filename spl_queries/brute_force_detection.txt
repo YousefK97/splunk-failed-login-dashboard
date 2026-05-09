@@ -1,1 +1,5 @@
-
+index=main 4625
+| bucket _time span=5m
+| stats count as failed_attempts by _time host
+| where failed_attempts >= 5
+| sort - failed_attempts
