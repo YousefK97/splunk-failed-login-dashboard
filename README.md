@@ -137,3 +137,28 @@ index=main 4625
 
 ## Brute Force Alert Configuration 
 ![Alert Configuration](screenshots/alerts/brute_force_alert_configuration.png)
+
+---
+
+# Investigation Scenario
+
+During testing, repeated failed authentication attempts were generated against a Windows account to simulate suspicious login behavior.
+
+The dashboard and alerting logic were used to:
+- Monitor authentication spikes
+- Identify repeated login failures
+- Aggregate failed login statistics
+- Trigger brute-force detection alerts
+
+This simulates a basic SOC investigation workflow using SIEM monitoring and event analysis.
+
+# Skills Learned
+
+- Splunk dashboard creation
+- SPL query development
+- Windows Security Event analysis
+- Event ID 4625 monitoring
+- SIEM alert configuration
+- Authentication failure analysis
+- Brute-force detection logic
+- Log ingestion and parsing
